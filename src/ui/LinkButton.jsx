@@ -1,3 +1,5 @@
+// import React from 'react';
+import PropTypes from 'prop-types';
 import { Link, useNavigate } from 'react-router-dom';
 
 function LinkButton({ children, to }) {
@@ -17,5 +19,11 @@ function LinkButton({ children, to }) {
     </Link>
   );
 }
+
+// Define prop types for LinkButton
+LinkButton.propTypes = {
+  children: PropTypes.node.isRequired,
+  to: PropTypes.string.isRequired,
+};
 
 export default LinkButton;
